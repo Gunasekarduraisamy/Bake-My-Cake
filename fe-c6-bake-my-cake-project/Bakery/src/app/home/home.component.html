@@ -1,0 +1,26 @@
+<mat-toolbar id="header" color="primary">
+    <h1>Bakery</h1>
+    <button mat-icon-button routerLink="/login" class="login" *ngIf="!logging.isLoggedIn"><mat-icon >login</mat-icon></button>
+    <button mat-icon-button (click)="status()" routerLink="" class="login" *ngIf="logging.isLoggedIn"><mat-icon >logout</mat-icon></button>
+    
+</mat-toolbar>
+<!-- <section>
+    <c-carousel>
+        <c-carousel-indicators></c-carousel-indicators>
+        <c-carousel-inner>
+          <c-carousel-item *ngFor="let slide of slides">
+            <img
+              [src]="slide.src"
+              alt="{{ slide.title }}"
+              class="d-block w-100"
+              loading="lazy" />
+          </c-carousel-item>
+        </c-carousel-inner>
+        <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+        <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+      </c-carousel>
+</section> -->
+<section>
+    <app-bake-list id="bake-list"></app-bake-list>
+</section>
+

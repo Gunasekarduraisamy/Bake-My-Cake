@@ -1,0 +1,18 @@
+<section>
+    <app-search id="search-note-panel" (searchEvent)="onSearch($event)"></app-search>
+  
+    <div style="margin-left: 150px;" class="btn">
+      <button mat-stroked-button color="primary" (click)="onfilter()">All ITEM</button>
+      <button mat-stroked-button color="primary" (click)="items(cakes)">CAKES</button>
+      <button mat-stroked-button color="primary" (click)="items(cookies)">COOKIES</button>
+      <button mat-stroked-button color="primary" (click)="items(brownies)">BROWNIES</button>
+    </div>
+    <div>
+        <app-bake-card 
+
+        *ngFor = "let bake of bakes" [bake]= "bake" >
+            
+        </app-bake-card>
+    </div>
+  </section>
+

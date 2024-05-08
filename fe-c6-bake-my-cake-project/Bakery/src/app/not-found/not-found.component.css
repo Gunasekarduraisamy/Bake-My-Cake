@@ -1,0 +1,29 @@
+.page{
+    margin-top: 3vw;
+    padding-left: 10px;
+    text-align: center;
+}
+.box{
+    width: 300px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    margin-top: 10vw;
+    margin-left: 37vw;
+    border: 3px solid blue;
+}
+a{
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 25px;
+}
+
+
+

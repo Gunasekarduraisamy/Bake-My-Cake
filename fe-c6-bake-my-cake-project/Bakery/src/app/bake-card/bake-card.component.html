@@ -1,0 +1,14 @@
+<mat-card class="bake-card">
+    <img mat-card-image src="../../assets/images/{{bake.image}}.jpg" height="200" width="253">
+    <mat-card-header>
+        <mat-card-title class="bake-title">{{bake.bakeName}}</mat-card-title>
+        <mat-card-subtitle class="amount">₹{{bake.price}}.00</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <h4>Earliest Delivery :<a>{{bake.delivery}}</a></h4>
+    </mat-card-content>
+    <mat-card-actions >
+        <mat-icon routerLink="bake-card/{{bake.id}}" class="cart-icon" color="primay" matTooltip="add to cart">shopping_cart</mat-icon>
+        
+    </mat-card-actions>
+</mat-card>

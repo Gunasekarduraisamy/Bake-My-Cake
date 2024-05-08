@@ -1,0 +1,37 @@
+.bake-card {
+    width: 20%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+    box-shadow: 15px 15px 7px grey;
+    height: 380px;
+    width: 253px;
+    margin-left: 50px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.bake-details {
+    white-space: normal;
+    overflow: hidden;
+}
+.amount {
+    font-weight: bold;
+    color: black;
+}
+
+.bake-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.cart-icon {
+    display: inline;
+    margin-right: 38px;
+    color: blue;
+}
+a{
+    color: red;
+    font-weight: bold;
+}

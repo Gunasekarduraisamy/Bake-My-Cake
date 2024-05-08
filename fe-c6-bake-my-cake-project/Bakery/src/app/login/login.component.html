@@ -1,0 +1,13 @@
+<mat-toolbar id="header" color="primary">
+    <h1>Make My Cake</h1>
+    <button mat-icon-button class="home" routerLink="/"><mat-icon>home</mat-icon></button>
+</mat-toolbar>
+<div id="login-form">
+    <h2>Welcome!!  If you are a Bakery Admin, Enter your Code </h2>
+    <mat-form-field >
+        <mat-label>Enter Admin Code</mat-label>
+        <input matInput name="adminCode" type="password" [(ngModel)]="adminCode" placeholder="Admin Code">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="validateAdminCode()">Submit</button>
+    <h3>If you are a Customer,<a routerLink="">=>click here</a></h3>
+</div>

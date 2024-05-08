@@ -1,0 +1,92 @@
+<mat-toolbar id="header" color="primary">
+    <h1>BAKERY _ BAKE Requests</h1>
+    <nav>
+      <button mat-icon-button class="home" routerLink="/"><mat-icon>home</mat-icon></button>
+    </nav>
+  </mat-toolbar>
+  <section>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Date of Cake Column -->
+        <ng-container matColumnDef="dateOfCake">
+          <th mat-header-cell *matHeaderCellDef>Date of Cake</th>
+          <td mat-cell *matCellDef="let element"> {{element.dateOfCake}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="customerName">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+        </ng-container>
+      
+        <!-- Email Column -->
+        <ng-container matColumnDef="customerEmail">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.customerEmail}} </td>
+        </ng-container>
+      
+        <!-- Phone Column -->
+        <ng-container matColumnDef="customerPhone">
+          <th mat-header-cell *matHeaderCellDef> Phone </th>
+          <td mat-cell *matCellDef="let element"> {{element.customerPhone}} </td>
+        </ng-container>
+      
+         <!-- Cake Quantiyy -->
+        <ng-container matColumnDef="quantity">
+          <th mat-header-cell *matHeaderCellDef> Cake Quantity </th>
+          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+        </ng-container>
+
+        <!-- Door No Column -->
+        <ng-container matColumnDef="doorNo">
+          <th mat-header-cell *matHeaderCellDef> DoorNo </th>
+          <td mat-cell *matCellDef="let element"> {{element.doorNo}} </td>
+        </ng-container>
+
+        <!-- street Column -->
+        <ng-container matColumnDef="street">
+          <th mat-header-cell *matHeaderCellDef> Street </th>
+          <td mat-cell *matCellDef="let element"> {{element.street}} </td>
+        </ng-container>
+
+        <!-- city Column -->
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef> City </th>
+          <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+        </ng-container>
+
+        <!-- state Column -->
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef> state </th>
+          <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+        </ng-container>
+
+        <!-- pin Code Column -->
+        <ng-container matColumnDef="pincode">
+          <th mat-header-cell *matHeaderCellDef> Pin Code </th>
+          <td mat-cell *matCellDef="let element"> {{element.pincode}} </td>
+        </ng-container>
+
+        
+
+        <!-- Bake Id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+
+        <!-- total Price -->
+        <ng-container matColumnDef="totalBillAmount">
+          <th mat-header-cell *matHeaderCellDef> TOTAL PRICE </th>
+          <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+       <mat-paginator [pageSizeOptions]="[3,9,15,25]" showFirstLastButtons></mat-paginator>
+  </section>
